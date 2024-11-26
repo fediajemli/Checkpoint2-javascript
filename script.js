@@ -30,17 +30,49 @@
 //    for(let i = 0; i < array.length; i++ ){ 
 //         if(array[i]){
 //             array[i]= array[i].charAt(0).toUpperCase() + array[i].slice(1);
-        
 
-//         }      
-       
-//     } return array;
-  
-        
+//         }       
+//     } return array; 
 //     }
 // let array = ["fedia", "", "is", "", "beatiful"];
 // let s = capitilizeWords(array);
 // console.log(s)
+// function capitilizeWords(str){
+//   return str.split(' ').map((word) => word[0].toUpperCase()+ word.slice(1) ).join(' ');   
+// }
+
+// let s = capitilizeWords("fedia is beautiful");
+// console.log(s)
+// function capitilizeWords(str){
+//     const t = (word) => word[0].toUpperCase()+ word.slice(1)
+//   return str.split(' ').map(t).join(' ');   
+// }
+function capitilizeWords(str){
+    let a = [];
+    let w = str.split(' ');
+    for (let e of w){
+       e= e[0].toUpperCase() + e.slice(1);
+       a.push(e);
+
+    } return a.join(' ');
+}
+
+// let s = capitilizeWords("fedia is beautiful");
+// console.log(s)
+// const a = ['a', 'b', 'c'];
+// const result = a.map(function (x){
+//     return x.toUpperCase();
+// });
+// arrow function
+// const add = function (a,b){
+//     return a + b;
+// }
+// const add = (a,b)=> {return a + b};
+// const add = (a,b)=> return a + b;
+// const add = (a,b)=> a + b;
+
+
+
 // function MaxMin(array){
 //     let max = array[0];
 //     let min = array[0];
@@ -69,15 +101,35 @@
 // }
 // let somme = Sum([15, 60, 3, 80]);
 // console.log(somme);
-// function filter(array){
+// function com(x, y){
+//     // let b = [];
+//     // for(let i = 1; i < array.length; i++){
+//     //     if ( array[i] % array[i-1] === 0){
+
+//     //        b.push(array[i]);
+//     //     }
+//     // } 
     
-//     for(let i = 0; i < array.length; i++){
-//         if ( array[i] % array[i-1] === 0){
-//            console.log(array[i]);
-//         }
-//     } 
+//     return x % y === 0;
+
 // }
-// let m = filter([15, 60, 3, 15]);
+// function filter(array, f ){
+//     let b = [];
+//     for(let i = 1; i < array.length; i++){
+//         if(f(array[i], array[i -1])) {
+
+//             b.push(array[i]);
+//         }
+
+
+//     }
+
+//     return b;
+  
+     
+//     } 
+
+// let m = filter([15, 60, 3, 15], com());
 // console.log(m);
 
 // function factorial(num){
@@ -104,22 +156,22 @@
 // }let m = prime(30);
 //  console.log(m);
 
-function fib(num){
+// function fib(num){
     
-    if (num === 0 ){
-        return  0;
-    }
-    if (num === 1 ){
-        return  1;
-    }
-    if (num > 1){
-        return  fib(num - 1) + fib(num - 2);
-    }
+//     if (num === 0 ){
+//         return  0;
+//     }
+//     if (num === 1 ){
+//         return  1;
+//     }
+//     if (num > 1){
+//         return  fib(num - 1) + fib(num - 2);
+//     }
     
 
-}
-let m = fib(11);
-console.log(m);
+// }
+// let m = fib(11);
+// console.log(m);
 
 
 
